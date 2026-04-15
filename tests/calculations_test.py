@@ -58,13 +58,83 @@ def test_get_nth_fibonacci_one():
     assert result == 1
 
 
-# def test_get_nth_fibonacci_ten():
-#     """Test with n=10."""
-#     # Arrange
-#     n = 10
+def test_get_nth_fibonacci_ten():
+    """Test with n=10."""
+    # Arrange
+    n = 10
 
-#     # Act
-#     result = get_nth_fibonacci(n)
+    # Act
+    result = get_nth_fibonacci(n)
 
-#     # Assert
-#     assert result == 89
+    # Assert
+    assert result == 55
+
+
+def test_get_nth_fibonacci_one():
+    """Test with n=1."""
+    # Arrange
+    n = 1
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 1
+
+
+def test_get_nth_fibonacci_two():
+    """Test with n=2."""
+    # Arrange
+    n = 2
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 1
+
+
+def test_get_nth_fibonacci_zero():
+    """Test with n=0."""
+    # Arrange
+    n = 0
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 0
+
+
+def test_get_nth_fibonacci_three():
+    """Test with n=3."""
+    # Arrange
+    n = 3
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 2
+
+
+    def test_get_nth_fibonacci_negative():
+        """Test with negative number."""
+    # Arrange
+    n = -1
+
+    # Act & Assert
+    with pytest.raises(ValueError):
+        get_nth_fibonacci(n)
+
+
+def test_get_nth_fibonacci_large():
+    """Test with n=5."""
+    # Arrange
+    n = 5
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 5
