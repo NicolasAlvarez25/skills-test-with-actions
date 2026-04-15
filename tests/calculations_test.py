@@ -116,3 +116,25 @@ def test_get_nth_fibonacci_three():
 
     # Assert
     assert result == 2
+
+
+    def test_get_nth_fibonacci_negative():
+        """Test with negative number."""
+    # Arrange
+    n = -1
+
+    # Act & Assert
+    with pytest.raises(ValueError):
+        get_nth_fibonacci(n)
+
+
+def test_get_nth_fibonacci_large():
+    """Test with n=5."""
+    # Arrange
+    n = 5
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 5
