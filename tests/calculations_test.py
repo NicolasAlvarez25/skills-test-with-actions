@@ -91,3 +91,26 @@ def test_get_nth_fibonacci_two():
 
     # Assert
     assert result == 1
+
+    def test_get_nth_fibonacci_zero():
+    """Test with n=0."""
+    # Arrange
+    n = 0
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 0
+
+
+def test_get_nth_fibonacci_three():
+    """Test with n=3."""
+    # Arrange
+    n = 3
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 2
